@@ -16,3 +16,9 @@ p {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
 }
+
+/* Remove extra spacing from the frontmatter container */
+/* https://jupyter-book.github.io/myst-plugins/update-date/ */
+#skip-to-frontmatter {
+    margin-bottom: 0;
+}

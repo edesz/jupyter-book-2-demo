@@ -30,6 +30,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        # change needed by page-last-updated plugin
+        # https://jupyter-book.github.io/myst-plugins/page-last-updated/
+        with:
+          fetch-depth: 0
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - uses: actions/setup-node@v4

@@ -1092,7 +1092,7 @@ packages:
 - pypi: ./
   name: bike-share
   version: 0.1.0
-  sha256: 32a55f135d07b3e24d75460fef840369bfe43b778cc0e818045549c5578bdc9a
+  sha256: 3362f905725d1d6a5b33ecbc620a9aa2db1056722e0e989b454233e1c7c443e1
   requires_python: '>=3.10'
 - conda: https://prefix.dev/conda-forge/noarch/bleach-6.3.0-pyhcf101f3_1.conda
   sha256: f8ff1f98423674278964a46c93a1766f9e91960d44efd91c6c3ed56a33813f46

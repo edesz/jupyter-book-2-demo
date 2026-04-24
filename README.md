@@ -47,7 +47,7 @@ All notebooks and Markdown files are used as-is in the online book version.
    make jb-init-gh-pages
    ```
 
-   The existing Github Action configuration file is the default one provided by following the [Jupyter Book 2 deployment instructions](https://jupyterbook.org/stable/get-started/publish/#github-pages). If any changes were made to the default configuration, then running this command will over-write that Github Action configuration file at `.github/workflows/deploy_book.yml`.
+   The existing Github Action configuration file is the default one provided by following the [Jupyter Book 2 deployment instructions](https://jupyterbook.org/stable/get-started/publish/#github-pages) with a change required to [automatically add the updated date](https://jupyter-book.github.io/myst-plugins/page-last-updated/). If any changes were made to the default configuration, then running this command will over-write that Github Action configuration file at `.github/workflows/deploy_book.yml`.
 8. (optional) Enable GitHub Pages on the Github repository, and [set its source to GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
 
 Every command from above creates a virtual environment and installs the Python package(s) required to perform the relevant action into that environment.
