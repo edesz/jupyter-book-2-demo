@@ -12,6 +12,12 @@ jlab:
 	@pixi run jlab
 .PHONY: jlab
 
+## Initialize Jupyter Book project
+jb-init:
+	@echo "+ $@"
+	@pixi run jb-init
+.PHONY: jb-init
+
 ## Build Jupyter Book HTML version
 jb-build:
 	@echo "+ $@"
