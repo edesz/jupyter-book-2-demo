@@ -76,6 +76,11 @@ jlab = { cmd = """
 
 [tool.pixi.feature.jupyterbook.tasks]
 # run tasks for the jupyterbook feature
+jb-init = { cmd = """
+    jupyter book init
+    """, description="""\
+    Initialize Jupyter Book project\
+    """, default-environment = "jbook" }
 jb-build = { cmd = """
     jupyter book build
     """, description="""\
