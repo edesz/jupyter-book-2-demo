@@ -10,13 +10,12 @@ project:
     - bikeshare-toronto
     - gbfs-standard
   github: edesz/jupyter-book-2-demo
-  jupyter: false
-  # thebe:
-  #   binder:
-  #     repo: edesz/jupyter-book-2-demo
-  #     provider: github
-  #     url: https://mybinder.org
-  #     ref: main
+  thebe:
+    binder:
+      repo: edesz/jupyter-book-2-demo
+      provider: github
+      url: https://mybinder.org
+      ref: HEAD
   authors:
     - edesz
     - joscary
