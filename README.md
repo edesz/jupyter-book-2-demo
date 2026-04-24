@@ -4,7 +4,9 @@
 
 ## About
 
-A starter project to begin publishing with Jupyter Book 2. Go from a collection of documents to somethng (an onlne book) that can be browsed much more naturally.
+A starter project to begin publishing with Jupyter Book 2.
+
+This allows to go from a collection of documents to somethng (an onlne book) that can be browsed much more naturally.
 
 ## Getting Started
 
@@ -42,7 +44,7 @@ A starter project to begin publishing with Jupyter Book 2. Go from a collection 
    pixi run jb-init-gh-pages
    ```
 
-   which will over-write the existing Github Action configuration file at `.github/workflows/deploy.yml`.
+   which will over-write the existing Github Action configuration file at `.github/workflows/deploy_book.yml`.
 7. (optional) Enable GitHub Pages on the Github repository, and [set its source to GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
 
 ### Available Commands
