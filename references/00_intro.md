@@ -1,7 +1,7 @@
 ---
 authors:
   - edesz
-date: 2025-10-04
+date: "04 Oct 2025"
 # edit_url: https://github.com/edesz/jupyter-book-2-demo/blob/main/references/00_title.md
 ---
 

@@ -2,7 +2,7 @@
 authors:
   - edesz
   - joscary
-date: 2025-10-05
+date: "05 Oct 2025"
 # edit_url: https://github.com/edesz/jupyter-book-2-demo/blob/main/references/01_problem_understanding.md
 ---
 

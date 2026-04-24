@@ -76,22 +76,22 @@ jlab = { cmd = """
 [tool.pixi.feature.jupyterbook.tasks]
 # run tasks for the jupyterbook feature
 jb-build = { cmd = """
-    jupyter book build --html --strict
+    jupyter book build
     """, description="""\
-    Build Jupyter Book HTML version\
+    Build Jupyter Book\
     """, default-environment = "jbook" }
 jb-start = { cmd = """
-    jupyter-book start --port 8080
+    jupyter-book start
     """, description="""\
     Start Jupyter Book Server\
     """, default-environment = "jbook" }
 jb-clean = { cmd = """
-    jupyter-book clean --all --yes
+    jupyter-book clean
     """, description="""\
-    Clean Jupyter Book static HTML content and cache\
+    Clean Jupyter Book artifacts\
     """, default-environment = "jbook" }
 jb-init-gh-pages = { cmd = """
     jupyter-book init --gh-pages
     """, description="""\
-    Create a GitHub Action to deploy Jupyter Book HTML\
+    Create a GitHub Action to deploy Jupyter Book\
     """, default-environment = "jbook" }

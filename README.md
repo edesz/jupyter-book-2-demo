@@ -1,12 +1,14 @@
 # Jupyter Book 2 Demo Project
 
-> A demo is a limited functionality version of a software designed to let users experience features, test performance, and gauge interest before using the full version. A demo is limited to a certain stage of adoption of the software. Demos typically feature a specific level of adjustable controls, allowing users to try experience the capabilities of the software.
+> A demo is a limited functionality version of a software designed to let users experience features, test performance, and gauge interest before using the full version. A demo is limited to a certain stage of adoption of the software. Demos typically feature a specific level of adjustable controls, allowing users to experience a limited subset of the capabilities of the software.
 
 ## About
 
 A starter project to begin publishing with Jupyter Book 2.
 
-This allows to go from a collection of documents to somethng (an onlne book) that can be browsed much more naturally.
+This allows to go from a collection of Markdown and Jupyter Notebook documents to somethng (e.g. an online book) that can be browsed much more naturally.
+
+All notebooks and Markdown files are used as-is in the online book version.
 
 ## Getting Started
 
@@ -15,58 +17,59 @@ This allows to go from a collection of documents to somethng (an onlne book) tha
 1. [Python](https://www.python.org/)
 2. [Pixi](https://pixi.prefix.dev/latest/) for package management
 
-### Installation and Development
+### Installation and Usage
 
 1. Clone the Github repository
    ```bash
    git clone https://github.com/edesz/jupyter-book-2-demo.git
    ```
-2. Create virtual environment for literate programming using Jupyterlab and start the server
+2. Start Jupyterlab for literate programming
    ```bash
-   pixi run jlab
+   make jlab
    ```
 
    This command runs a Jupyterlab server and launches the web user interface in the default browser. The site will be available at http://localhost:8888.
-3. After notebooks and project scoping Markdown files in `references` are ready, build Jupyter Book
+3. Create and finalize Jupyter notebooks the `notebooks` folder and project scoping Markdown files in the `references` folder
+4. Build the Jupyter Book
    ```bash
-   pixi run jb-build
+   make jb-build
    ```
-4. Start the Jupyter Book server on port 8080
+5. Start the Jupyter Book server on a custom port (8081)
    ```bash
-   pixi run jb-start
+   make jb-start
    ```
-5. Delete Jupyter Book local build artifacts
+6. Delete Jupyter Book local build artifacts
    ```bash
-   pixi run jb-clean
+   make jb-clean
    ```
-6. (optional) Create Jupyter Book Github Action, for deployment to Github Pages
+7. (optional) Create Jupyter Book Github Action, for deployment to Github Pages
    ```bash
-   pixi run jb-init-gh-pages
+   make jb-init-gh-pages
    ```
 
-   which will over-write the existing Github Action configuration file at `.github/workflows/deploy_book.yml`.
-7. (optional) Enable GitHub Pages on the Github repository, and [set its source to GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+   The existing Github Action configuration file is the default one provided by following the [Jupyter Book 2 deployment instructions](https://jupyterbook.org/stable/get-started/publish/#github-pages). If any changes were made to the default configuration, then running this command will over-write that Github Action configuration file at `.github/workflows/deploy_book.yml`.
+8. (optional) Enable GitHub Pages on the Github repository, and [set its source to GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+
+Every command from above creates a virtual environment and installs the Python package(s) required to perform the relevant action into that environment.
 
 ### Available Commands
 
 Run
 
 ```bash
-pixi task list
+make help
 ```
 
-to see all available tasks
+to see all available [`make` targets](https://www.gnu.org/software/make/manual/make.html#Phony-Targets)
 
 ```bash
-Tasks that can run on this machine:
------------------------------------
-jb-build, jb-clean, jb-init-gh-pages, jb-start, jlab
-Task              Description
-jb-build          Build Jupyter Book HTML version
-jb-clean          Clean Jupyter Book static HTML content and cache
-jb-init-gh-pages  Create a GitHub Action to deploy Jupyter Book HTML
-jb-start          Start Jupyter Book Server
-jlab              Launch Jupyterlab
+Available rules:
+
+jb-build            Build Jupyter Book HTML version 
+jb-clean            Clean Jupyter Book static HTML content & cache 
+jb-init-gh-pages    Create a GitHub Action to deploy Jupyter Book 
+jb-start            Start Jupyter Book server 
+jlab                Run Jupyterlab
 ```
 
 ## Community
