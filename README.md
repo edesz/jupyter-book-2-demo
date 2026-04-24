@@ -66,10 +66,11 @@ to see all available [`make` targets](https://www.gnu.org/software/make/manual/m
 Available rules:
 
 jb-build            Build Jupyter Book HTML version 
-jb-clean            Clean Jupyter Book static HTML content & cache 
+jb-clean            Clean Jupyter Book HTML content and cache 
 jb-init-gh-pages    Create a GitHub Action to deploy Jupyter Book 
 jb-start            Start Jupyter Book server 
-jlab                Run Jupyterlab
+jlab                Run Jupyterlab 
+p2c                 Export pixi environment to conda
 ```
 
 ## Community

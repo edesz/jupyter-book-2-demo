@@ -24,7 +24,7 @@ jb-start:
 	@pixi run jb-start -- --port 8081
 .PHONY: jb-start
 
-## Clean Jupyter Book static HTML content & cache
+## Clean Jupyter Book HTML content and cache
 jb-clean:
 	@echo "+ $@"
 	@pixi run jb-clean -- --all --yes
@@ -35,6 +35,12 @@ jb-init-gh-pages:
 	@echo "+ $@"
 	@pixi run jb-init-gh-pages
 .PHONY: jb-init-gh-pages
+
+## Export pixi environment to conda
+p2c:
+	@echo "+ $@"
+	@pixi workspace export conda-environment --environment notebooks > environment.yml
+.PHONY: p2c
 
 #################################################################################
 # PROJECT RULES                                                                 #
