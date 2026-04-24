@@ -1,0 +1,97 @@
+# ============================== Project metadata ==============================
+
+[project]
+name = "bike-share"
+version = "0.1.0"
+description = "Demo project that creates Jupyter Book from all notebooks."
+authors = [{name = "edesz"}]
+requires-python = ">= 3.10"
+# These are the PyPI dependencies, added with: pixi add --pypi PACKAGE_NAME
+dependencies = []
+
+[tool.pixi.workspace]
+channels = ["https://prefix.dev/conda-forge"]
+platforms = ["linux-64"]
+
+# location where the build tool should find custom modules to be tested
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# ============================= Conda dependencies =============================
+
+[tool.pixi.dependencies]
+python = "3.12.10.*"
+# use pyarrow from conda-forge in order to get required C dependencies
+numpy = "*"
+pyarrow = "*"
+pandas = "*"
+vegafusion = "*"
+altair = "*"
+
+# ================== Make this project available as a package ==================
+
+[tool.pixi.pypi-dependencies]
+bike-share = { path = ".", editable = true }
+
+# ========= Specify non-essential dependencies in features ========
+
+[tool.pixi.feature.notebooks.dependencies]
+# create a notebooks feature for exploration
+ipykernel = "*"
+ipywidgets = "*"
+jupyterlab = "*"
+jupyterlab-myst = "*"
+jupysql = "*"
+jupytext = "*"
+jupyter_server_ydoc = "*"
+jupyter_server_fileid = "*"
+jupyter-ruff = "*"
+nbconvert = "*"
+nbclassic = "*"
+panel = "*"
+toml = "*"
+
+[tool.pixi.feature.jupyterbook.dependencies]
+# create a Jupyter Book feature
+jupyter-book = "*"
+
+# ========= Specify non-essential dependencies in environments ========
+
+[tool.pixi.environments]
+# create environments that use features created above
+default = { solve-group = "default" }
+# notebooks env inherits default feature and notebooks feature to run jlab
+notebooks = { features = ['default', "notebooks"], solve-group = "notebooks" }
+jbook = { features = ["default", "jupyterbook"], solve-group = "jbook" }
+
+# ========================== Define tasks (shortcuts) ==========================
+
+[tool.pixi.feature.notebooks.tasks]
+# run development tasks for the notebooks feature
+jlab = { cmd = """
+    jupyter lab""", depends-on = [], description="""\
+    Launch Jupyterlab\
+    """, default-environment = "notebooks" }
+
+[tool.pixi.feature.jupyterbook.tasks]
+# run tasks for the jupyterbook feature
+jb-build = { cmd = """
+    jupyter book build --html --strict
+    """, description="""\
+    Build Jupyter Book HTML version\
+    """, default-environment = "jbook" }
+jb-start = { cmd = """
+    jupyter-book start --port 8080
+    """, description="""\
+    Start Jupyter Book Server\
+    """, default-environment = "jbook" }
+jb-clean = { cmd = """
+    jupyter-book clean --all --yes
+    """, description="""\
+    Clean Jupyter Book static HTML content and cache\
+    """, default-environment = "jbook" }
+jb-init-gh-pages = { cmd = """
+    jupyter-book init --gh-pages
+    """, description="""\
+    Create a GitHub Action to deploy Jupyter Book HTML\
+    """, default-environment = "jbook" }

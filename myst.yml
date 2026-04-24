@@ -1,0 +1,52 @@
+version: 1
+extends:
+  - ./docs/authors.yml
+project:
+  id: 1b08429a-1a1a-4557-aafe-8262e27f1f46
+  title: Canadian Bikeshare Stations
+  description: Querying GBFS station status and metadata for Canadian bikeshare networks
+  keywords:
+    - toronto-open-data
+    - bikeshare-toronto
+    - gbfs-standard
+  github: edesz/jupyter-book-2-demo
+  thebe:
+    binder:
+      repo: edesz/jupyter-book-2-demo
+      provider: github
+      url: https://mybinder.org
+      ref: main
+  authors:
+    - edesz
+    - joscary
+  license: MIT
+  toc:
+    - file: references/00_intro.md
+    - title: Project Scoping
+      children:
+        - file: references/01_background.md
+    - title: Raw Data Retrieval
+      children:
+        - file: notebooks/01_get_data.ipynb
+    - title: Data Transformation
+      children:
+        - file: notebooks/02_get_stations_data.ipynb
+    - title: EDA
+      children:
+        - file: notebooks/03_eda.ipynb
+  plugins:
+    - https://github.com/jupyter-book/myst-plugins/releases/download/page-last-updated/page-last-updated.mjs
+
+site:
+  options:
+    logo_text: "Canada Bikeshare"
+    style: ./docs/_static/custom.css
+    folders: true
+    layout:
+      content_width: "100%"
+  template: book-theme
+  parts:
+    banner: ./docs/banner.md
+    primary_sidebar_footer: ./docs/custom-footer.md
+    # primary_sidebar_footer: ''
+    footer: ./docs/footer.md

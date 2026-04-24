@@ -1,0 +1,49 @@
+version: 1
+project:
+  contributors:
+    - id: edesz
+      name: E. D.
+      orcid: 0000-0001-8216-4647
+      roles:
+        - Conceptualization
+        - Methodology
+        - Visualization
+        - Writing - original draft
+        - Supervision
+        - Validation
+        - Project administration
+      github: edesz
+      affiliations:
+        - id: mcmasteru
+    - id: joscary
+      name: Josiah Carberry
+      # https://orcid.org/0000-0002-1825-0097
+      orcid: 0000-0002-1825-0097
+      roles:
+        - Software
+        - Formal analysis
+        - Investigation
+        - Writing - review & editing
+      # https://github.com/pixelastic/fakeusers#example
+      github: biglion964
+      affiliations:
+        - id: brownu
+  affiliations:
+    - id: mcmasteru
+      institution: McMaster University
+      ror: https://ror.org/02fa3aq29
+      isni: 0000 0004 1936 7857
+      address: 1280 Main Street West
+      city: Hamilton
+      region: Ontario
+      country: Canada
+      postal_code: L8S 4K1
+    - id: brownu
+      institution: Brown University
+      ror: https://ror.org/05gqeea29
+      isni: 0000 0004 1936 9094
+      address: 1 Prospect Street
+      city: Providence
+      region: Rhode Island
+      country: United States
+      postal_code: 02912
