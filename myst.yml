@@ -72,3 +72,4 @@ site:
       Made with ︎♥️ & [Jupyter Book](https://jupyterbook.org/)
       ::::
       :::::
+    navbar_end: ./docs/_static/navbar_end.md
