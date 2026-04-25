@@ -22,6 +22,10 @@ project:
   license: MIT
   toc:
     - file: references/00_intro.md
+    - file: CODE_OF_CONDUCT.md
+      hidden: true
+    - file: LICENSE.md
+      hidden: true
     - title: Project Scoping
       children:
         - file: references/01_background.md
