@@ -22,3 +22,25 @@ p {
 #skip-to-frontmatter {
     margin-bottom: 0;
 }
+
+/* customize button at end of navbar in docs/_static/navbar_end.md */
+.btn-darkblue a {
+    background-color: #00008B !important;
+    /* Red background */
+    color: white !important;
+    /* White text */
+    padding: 6px 14px !important;
+    /* Button padding */
+    border-radius: 6px !important;
+    /* Rounded corners */
+    text-decoration: none !important;
+    /* Remove underline */
+    font-weight: 600 !important;
+    display: inline-block !important;
+    transition: background-color 0.2s;
+}
+
+.btn-darkblue a:hover {
+    background-color: #151B54 !important;
+    /* Darker red on hover */
+}
