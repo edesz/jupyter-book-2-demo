@@ -72,4 +72,7 @@ site:
       Made with ︎♥️ & [Jupyter Book](https://jupyterbook.org/)
       ::::
       :::::
-    navbar_end: ./docs/_static/navbar_end.md
+    navbar_end: |
+      ::::
+      {span .btn-darkblue}`[GitHub](https://github.com/edesz/jupyter-book-2-demo)`
+      ::::
