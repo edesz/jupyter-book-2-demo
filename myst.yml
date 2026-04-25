@@ -72,7 +72,3 @@ site:
       Made with ︎♥️ & [Jupyter Book](https://jupyterbook.org/)
       ::::
       :::::
-    navbar_end: |
-      ::::
-      {span .btn-darkblue}`[GitHub](https://github.com/edesz/jupyter-book-2-demo)`
-      ::::
